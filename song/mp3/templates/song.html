@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Song{% endblock %}
+{% block content %}
+<br><br><div class="card" style="height:430px;width:450px;margin-left:300px;background-color: black;border-radius: 15px;">
+    <img style="margin-left:60px;" src="{{i.song_image.url}}" alt="" height="200px">
+    <div class="container" style="color: whitesmoke;"><br>
+      <h4><b>Song : {{i.song_name}}</b></h4> 
+      <h4><b>Artist : {{i.singer_name}}</b></h4>  
+    </div>
+    <audio controls style="margin-left: 90px;"><source src = "{{i.song_audio.url}}" /></audio><br><br>
+    <a href="{{i.song_audio.url}}"  class="btn btn-info" download  style="margin-left: 350px;">Download</a>
+  </div>
+{% endblock %}
